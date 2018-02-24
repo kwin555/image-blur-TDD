@@ -17,12 +17,6 @@ class Image
     end
   end
 
-  def to_s
-    image_data.map do |row|
-      row.join(', ')
-    end.join("\n")
-  end
-
   def blur
     distance = 1
     distance.times do
@@ -60,7 +54,7 @@ class Image
   end
 
   def right_edge?(column_number)
-    column_number == height - 1
+    column_number == width - 1
   end
 
   def blur_right(row_number, column_number)
@@ -76,7 +70,7 @@ class Image
   end
 
   def bottom_edge?(row_number)
-    row_number == width
+    row_number == height - 1
   end
 
   def blur_bottom(row_number, column_number)
