@@ -1,5 +1,4 @@
 require 'spec_helper'
-
 RSpec.describe Image, type: :model do
   describe "blurring should work" do
     it "should blur a standard image" do
